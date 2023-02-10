@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --twitter-blue: #1da1f2;
+    --text-primary: #0f1419;
+    --border-color: #ebeef0;
+    --text-white: #fff;
+}
+
+body {
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+textarea,
+button {
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+}
