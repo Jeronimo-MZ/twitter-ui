@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.45rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+
+    font-weight: 700;
+    color: black;
+}
+
+.container svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: var(--twitter-blue);
+}
