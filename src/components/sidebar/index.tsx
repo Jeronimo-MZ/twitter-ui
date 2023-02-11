@@ -20,7 +20,12 @@ export function Sidebar() {
             <img src={twitterLogo} alt="Twitter Logo" className={styles.logo} />
             <nav className={styles.menu}>
                 <NavLink to="/" className={handleActiveClassName}>
-                    <House weight="fill" /> Home
+                    {({ isActive }) => (
+                        <>
+                            <House weight={isActive ? `fill` : undefined} />
+                            Home
+                        </>
+                    )}
                 </NavLink>
                 <NavLink to="#">
                     <Hash /> Explore

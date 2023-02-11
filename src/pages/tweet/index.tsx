@@ -1,7 +1,7 @@
 import { Header } from "@/components/header";
 import { Separator } from "@/components/separator";
 import { TimelineTweet } from "@/components/timeline-tweet";
-import { FormEvent, useState } from "react";
+import { FormEvent, KeyboardEvent, useState } from "react";
 import styles from "./tweet.module.css";
 
 const tweet = `
@@ -27,6 +27,13 @@ export function Tweet() {
         setAnswers((prev) => [newAnswer, ...prev]);
         setNewAnswer("");
     };
+    const handleHotKeySubmit = (event: KeyboardEvent) => {
+        if ((event.ctrlKey || event.metaKey) && event.key === "Enter") {
+            setAnswers((prev) => [newAnswer, ...prev]);
+            setNewAnswer("");
+        }
+    };
+
     return (
         <>
             <Header title="Tweet" />
@@ -44,6 +51,7 @@ export function Tweet() {
                         placeholder="Tweet your answer"
                         value={newAnswer}
                         onChange={(e) => setNewAnswer(e.target.value)}
+                        onKeyDown={handleHotKeySubmit}
                     />
                 </label>
                 <button type="submit">Tweet</button>
