@@ -1,0 +1,50 @@
+.form {
+    width: 100%;
+    padding: 2rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.form > label {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.form > label > img {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+}
+
+.form > label > textarea {
+    flex: 1;
+    padding: 1.65rem 0;
+    resize: none;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form > label > textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+.form > button {
+    background: var(--twitter-blue);
+    border: none;
+    color: var(--text-white);
+    border-radius: 9999px;
+    padding: 1.05rem 2.4rem;
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.form > button:hover {
+    filter: brightness(0.95);
+}

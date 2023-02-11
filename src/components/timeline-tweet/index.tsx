@@ -1,16 +1,11 @@
-import styles from "./tweet.module.css";
+import styles from "./timeline-tweet.module.css";
 import { ChatCircle, Heart, ArrowsClockwise } from "phosphor-react";
 import { Link } from "react-router-dom";
 
-const text = `
-Acabei de migrar um projeto React GIGANTE de create-react-app para Vite e os resultados foram:
-
-✅ npm start: De 32s para 400ms (sim, demorava 30s)
-✅ npm build: De 120s para 22s
-
-Além disso, troquei do Yarn para o PNPM e o install das deps mudou de 24s para 8s 🔥
-`;
-export function TimelineTweet() {
+type TimelineTweetProps = {
+    text: string;
+};
+export function TimelineTweet({ text }: TimelineTweetProps) {
     return (
         <article className={styles.container}>
             <img
@@ -24,7 +19,7 @@ export function TimelineTweet() {
                     <strong>Jerónimo Matavel</strong>
                     <span>@jeronimo-mz</span>
                 </header>
-                <Link to="#">{text}</Link>
+                <Link to="/tweet">{text}</Link>
                 <footer>
                     <button>
                         <ChatCircle /> 32

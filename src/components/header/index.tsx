@@ -1,9 +1,13 @@
 import { Sparkle } from "phosphor-react";
 import styles from "./header.module.css";
-export function Header() {
+
+type HeaderProps = {
+    title: string;
+};
+export function Header({ title }: HeaderProps) {
     return (
         <header className={styles.container}>
-            <span>Home</span>
+            <span>{title}</span>
             <Sparkle />
         </header>
     );

@@ -10,37 +10,39 @@ import {
     User,
     DotsThreeCircle,
 } from "phosphor-react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
+const handleActiveClassName = ({ isActive }: { isActive: boolean }) =>
+    isActive ? styles.active : undefined;
 export function Sidebar() {
     return (
         <aside className={styles.sidebar}>
             <img src={twitterLogo} alt="Twitter Logo" className={styles.logo} />
             <nav className={styles.menu}>
-                <Link to="/" className={styles.active}>
+                <NavLink to="/" className={handleActiveClassName}>
                     <House weight="fill" /> Home
-                </Link>
-                <Link to="#">
+                </NavLink>
+                <NavLink to="#">
                     <Hash /> Explore
-                </Link>
-                <Link to="#">
+                </NavLink>
+                <NavLink to="#">
                     <Bell /> Notifications
-                </Link>
-                <Link to="#">
+                </NavLink>
+                <NavLink to="#">
                     <EnvelopeSimple /> Messages
-                </Link>
-                <Link to="#">
+                </NavLink>
+                <NavLink to="#">
                     <BookmarkSimple /> Bookmarks
-                </Link>
-                <Link to="#">
+                </NavLink>
+                <NavLink to="#">
                     <FileText /> Lists
-                </Link>
-                <Link to="#">
+                </NavLink>
+                <NavLink to="#">
                     <User /> Profile
-                </Link>
-                <Link to="#">
+                </NavLink>
+                <NavLink to="#">
                     <DotsThreeCircle /> More
-                </Link>
+                </NavLink>
             </nav>
             <button type="button" className={styles.newTweet}>
                 Tweet
