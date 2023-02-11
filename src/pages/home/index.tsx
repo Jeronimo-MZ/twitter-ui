@@ -1,9 +1,10 @@
 import { Header } from "@/components/header";
 import { Separator } from "@/components/separator";
 import { TimelineTweet } from "@/components/timeline-tweet";
+import { FormEvent, useState } from "react";
 import styles from "./home.module.css";
 
-const tweets = [
+const initialTweets = [
     `
 Acabei de migrar um projeto React GIGANTE de create-react-app para Vite e os resultados foram:
 
@@ -18,12 +19,21 @@ Soluções que resolvem problemas de forma semelhante, mas com precificação ma
 
 Tudo começa com um projeto open source/free 👀`,
 ];
+
 export function Home() {
+    const [newTweet, setNewTweet] = useState("");
+    const [tweets, setTweets] = useState(initialTweets);
+    const handleSubmit = (event: FormEvent) => {
+        event.preventDefault();
+        setTweets((prev) => [newTweet, ...prev]);
+        setNewTweet("");
+    };
+
     return (
         <>
             <Header title="Home" />
             <main>
-                <form className={styles.form}>
+                <form onSubmit={handleSubmit} className={styles.form}>
                     <label htmlFor="tweet">
                         <img
                             src="https://github.com/jeronimo-mz.png"
@@ -33,6 +43,8 @@ export function Home() {
                             name="tweet"
                             id="tweet"
                             placeholder="What's Happening?"
+                            value={newTweet}
+                            onChange={(e) => setNewTweet(e.target.value)}
                         />
                     </label>
                     <button type="submit">Tweet</button>
