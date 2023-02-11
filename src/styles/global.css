@@ -11,9 +11,11 @@
     --text-secondary: #5b7083;
     --border-color: #ebeef0;
     --text-white: #fff;
+    --background: #fff;
 }
 
 body {
+    background: var(--background);
     color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
 }
