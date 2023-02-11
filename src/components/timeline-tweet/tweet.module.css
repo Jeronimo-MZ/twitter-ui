@@ -36,6 +36,7 @@
     line-height: 1.25;
     text-decoration: none;
     display: block;
+    white-space: pre-wrap;
 }
 
 .tweetContent > footer {

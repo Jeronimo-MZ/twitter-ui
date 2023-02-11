@@ -2,7 +2,7 @@ import { Header } from "@/components/header";
 import { NewTweetForm } from "@/components/new-tweet-form";
 import { Separator } from "@/components/separator";
 import { Sidebar } from "@/components/sidebar";
-import { Tweet } from "@/components/tweet";
+import { TimelineTweet } from "@/components/timeline-tweet";
 import styles from "./home.module.css";
 
 export function Home() {
@@ -14,15 +14,15 @@ export function Home() {
                 <main className={styles.timeline}>
                     <NewTweetForm />
                     <Separator />
-                    <Tweet />
-                    <Tweet />
-                    <Tweet />
-                    <Tweet />
-                    <Tweet />
-                    <Tweet />
-                    <Tweet />
-                    <Tweet />
-                    <Tweet />
+                    <TimelineTweet />
+                    <TimelineTweet />
+                    <TimelineTweet />
+                    <TimelineTweet />
+                    <TimelineTweet />
+                    <TimelineTweet />
+                    <TimelineTweet />
+                    <TimelineTweet />
+                    <TimelineTweet />
                 </main>
             </div>
         </div>

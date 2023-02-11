@@ -10,36 +10,37 @@ import {
     User,
     DotsThreeCircle,
 } from "phosphor-react";
+import { Link } from "react-router-dom";
 
 export function Sidebar() {
     return (
         <aside className={styles.sidebar}>
             <img src={twitterLogo} alt="Twitter Logo" className={styles.logo} />
             <nav className={styles.menu}>
-                <a href="#" className={styles.active}>
+                <Link to="/" className={styles.active}>
                     <House weight="fill" /> Home
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                     <Hash /> Explore
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                     <Bell /> Notifications
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                     <EnvelopeSimple /> Messages
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                     <BookmarkSimple /> Bookmarks
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                     <FileText /> Lists
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                     <User /> Profile
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                     <DotsThreeCircle /> More
-                </a>
+                </Link>
             </nav>
             <button type="button" className={styles.newTweet}>
                 Tweet
