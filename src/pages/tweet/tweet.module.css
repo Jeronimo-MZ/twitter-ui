@@ -54,3 +54,21 @@
 .answers {
     border-top: 2px solid var(--border-color);
 }
+
+.answerForm > button > svg {
+    display: none;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+@media screen and (max-width: 780px) {
+    .answerForm > button span {
+        display: none;
+    }
+    .answerForm > button {
+        padding: 0.8rem;
+    }
+    .answerForm > button > svg {
+        display: block;
+    }
+}

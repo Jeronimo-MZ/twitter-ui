@@ -52,3 +52,21 @@
 .newTweet:hover {
     filter: brightness(0.95);
 }
+.newTweet svg {
+    display: none;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+@media screen and (max-width: 780px) {
+    .menu a span,
+    .newTweet span {
+        display: none;
+    }
+    .newTweet {
+        padding: 0.8rem;
+    }
+    .newTweet svg {
+        display: block;
+    }
+}

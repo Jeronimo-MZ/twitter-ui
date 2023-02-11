@@ -9,6 +9,7 @@ import {
     FileText,
     User,
     DotsThreeCircle,
+    Pencil,
 } from "phosphor-react";
 import { NavLink } from "react-router-dom";
 
@@ -23,34 +24,35 @@ export function Sidebar() {
                     {({ isActive }) => (
                         <>
                             <House weight={isActive ? `fill` : undefined} />
-                            Home
+                            <span>Home</span>
                         </>
                     )}
                 </NavLink>
                 <NavLink to="#">
-                    <Hash /> Explore
+                    <Hash /> <span>Explore</span>
                 </NavLink>
                 <NavLink to="#">
-                    <Bell /> Notifications
+                    <Bell /> <span>Notifications</span>
                 </NavLink>
                 <NavLink to="#">
-                    <EnvelopeSimple /> Messages
+                    <EnvelopeSimple /> <span>Messages</span>
                 </NavLink>
                 <NavLink to="#">
-                    <BookmarkSimple /> Bookmarks
+                    <BookmarkSimple /> <span>Bookmarks</span>
                 </NavLink>
                 <NavLink to="#">
-                    <FileText /> Lists
+                    <FileText /> <span>Lists</span>
                 </NavLink>
                 <NavLink to="#">
-                    <User /> Profile
+                    <User /> <span>Profile</span>
                 </NavLink>
                 <NavLink to="#">
-                    <DotsThreeCircle /> More
+                    <DotsThreeCircle /> <span>More</span>
                 </NavLink>
             </nav>
             <button type="button" className={styles.newTweet}>
-                Tweet
+                <Pencil size={"2.4rem"} />
+                <span>Tweet</span>
             </button>
         </aside>
     );

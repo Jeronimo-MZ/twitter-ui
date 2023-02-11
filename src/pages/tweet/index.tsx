@@ -1,6 +1,7 @@
 import { Header } from "@/components/header";
 import { Separator } from "@/components/separator";
 import { TimelineTweet } from "@/components/timeline-tweet";
+import { PaperPlane, PaperPlaneRight } from "phosphor-react";
 import { FormEvent, KeyboardEvent, useState } from "react";
 import styles from "./tweet.module.css";
 
@@ -54,7 +55,10 @@ export function Tweet() {
                         onKeyDown={handleHotKeySubmit}
                     />
                 </label>
-                <button type="submit">Tweet</button>
+                <button type="submit">
+                    <PaperPlaneRight />
+                    <span>Answer</span>
+                </button>
             </form>
             <main className={styles.answers}>
                 {answers.map((answer) => (
